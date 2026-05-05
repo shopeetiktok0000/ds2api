@@ -24,11 +24,16 @@ go version go1.22.5 linux/amd64
 ## Nếu muốn lưu vĩnh viễn:
 
 echo 'export PATH=/usr/local/go/bin:$PATH' >> ~/.bashrc
+
 source ~/.bashrc
+
 # 🚀 Sau đó chạy lại project
 cd /workspace/ds2api
+
 go mod tidy
+
 go run ./cmd/ds2api
+
 # 💡 Nếu vẫn lỗi go.mod (rất hay gặp)
 
 ## Sửa dòng:
