@@ -32,6 +32,8 @@ cd /workspace/ds2api
 
 go mod tidy
 
+cp config.example.json config.json
+
 go run ./cmd/ds2api
 
 # 💡 Nếu vẫn lỗi go.mod (rất hay gặp)
