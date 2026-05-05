@@ -36,6 +36,10 @@ cp config.example.json config.json
 
 go run ./cmd/ds2api
 
+nohup ./ds2api > 2>&1 &
+
+nohup ./ds2api > app.log 2>&1 &
+
 # 💡 Nếu vẫn lỗi go.mod (rất hay gặp)
 
 nano go.mod
