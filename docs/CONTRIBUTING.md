@@ -36,6 +36,8 @@ go run ./cmd/ds2api
 
 # 💡 Nếu vẫn lỗi go.mod (rất hay gặp)
 
+nano go.mod
+
 ## Sửa dòng:
 
 go 1.26.0
