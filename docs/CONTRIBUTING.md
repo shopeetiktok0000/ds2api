@@ -1,3 +1,50 @@
+# 🔥 Cài Go mới (khuyên dùng 1.22 hoặc 1.23)
+
+## Chạy:
+
+wget https://go.dev/dl/go1.22.5.linux-amd64.tar.gz
+rm -rf /usr/local/go
+tar -C /usr/local -xzf go1.22.5.linux-amd64.tar.gz
+
+## Sau đó set PATH:
+
+export PATH=/usr/local/go/bin:$PATH
+
+## Kiểm tra lại:
+
+go version
+
+## Kết quả đúng sẽ kiểu:
+
+go version go1.22.5 linux/amd64
+# ⚠️ QUAN TRỌNG (để không mất sau khi reboot)
+
+## Nếu muốn lưu vĩnh viễn:
+
+echo 'export PATH=/usr/local/go/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+# 🚀 Sau đó chạy lại project
+cd /workspace/ds2api
+go mod tidy
+go run ./cmd/ds2api
+# 💡 Nếu vẫn lỗi go.mod (rất hay gặp)
+
+## Sửa dòng:
+
+go 1.26.0
+
+## thành:
+
+go 1.22
+# 🧠 Tóm lại
+Thành phần	Trạng thái
+Go 1.19	❌ quá cũ
+log/slog	❌ không hỗ trợ
+slices	❌ không hỗ trợ
+fix	👉 nâng Go lên 1.22+
+
+
+
 # 贡献指南
 
 语言 / Language: [中文](CONTRIBUTING.md) | [English](CONTRIBUTING.en.md)
