@@ -34,7 +34,11 @@ go mod tidy
 
 cp config.example.json config.json
 
+# chạy test nhanh
 go run ./cmd/ds2api
+
+# Build & chạy lâu 
+go build -o ds2api ./cmd/ds2api
 
 nohup ./ds2api > 2>&1 &
 
